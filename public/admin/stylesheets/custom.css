@@ -1,0 +1,11 @@
+input, textarea {
+    width: 50%;
+}
+
+select {
+    width:auto;
+}
+
+textarea {
+    height:120px;
+}
