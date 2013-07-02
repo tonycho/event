@@ -14,7 +14,7 @@
     <file path="/_event.html.haml" changelist="a7ee6285-1580-4bcd-a2e5-ea821033345e" time="1372375503322" ignored="false" />
     <file path="/show.html.haml" changelist="a7ee6285-1580-4bcd-a2e5-ea821033345e" time="1372375545761" ignored="false" />
     <file path="/application.haml" changelist="a7ee6285-1580-4bcd-a2e5-ea821033345e" time="1372717941157" ignored="false" />
-    <file path="/index.haml" changelist="a7ee6285-1580-4bcd-a2e5-ea821033345e" time="1372724529809" ignored="false" />
+    <file path="/index.haml" changelist="a7ee6285-1580-4bcd-a2e5-ea821033345e" time="1372724919768" ignored="false" />
     <file path="/_form.haml" changelist="a7ee6285-1580-4bcd-a2e5-ea821033345e" time="1372724653186" ignored="false" />
     <file path="$PROJECT_DIR$/../../cpcc/attendance/Gemfile" changelist="a7ee6285-1580-4bcd-a2e5-ea821033345e" time="1372653052846" ignored="false" />
     <file path="$PROJECT_DIR$/../../cpcc/attendance/config/database.rb" changelist="a7ee6285-1580-4bcd-a2e5-ea821033345e" time="1372653090448" ignored="false" />
@@ -85,9 +85,18 @@
         </entry>
       </file>
       <file leaf-file-name="index.haml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin/views/base/index.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="0" selection-start="75" selection-end="505" vertical-scroll-proportion="0.11653718">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.haml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/views/registrants/index.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="15" selection-start="2364" selection-end="2364" vertical-scroll-proportion="0.7601351">
+            <state line="45" column="15" selection-start="2364" selection-end="2364" vertical-scroll-proportion="-28.125">
               <folding />
             </state>
           </provider>
@@ -156,7 +165,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/admin/views/categories/new.haml" />
         <option value="$PROJECT_DIR$/public/admin/stylesheets/custom.css" />
         <option value="$PROJECT_DIR$/admin/controllers/conferences.rb" />
         <option value="$PROJECT_DIR$/admin/views/conferences/_form.haml" />
@@ -172,6 +180,7 @@
         <option value="$PROJECT_DIR$/admin/views/registrants/index.haml" />
         <option value="$PROJECT_DIR$/admin/views/registrants/_form.haml" />
         <option value="$PROJECT_DIR$/admin/views/registrants/edit.haml" />
+        <option value="$PROJECT_DIR$/admin/views/base/index.haml" />
       </list>
     </option>
   </component>
@@ -795,13 +804,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/admin/views/conferences/_form.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="87" selection-start="2833" selection-end="2833" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/database.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="60" selection-start="638" selection-end="638" vertical-scroll-proportion="0.0">
@@ -902,7 +904,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/views/registrants/index.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="15" selection-start="2364" selection-end="2364" vertical-scroll-proportion="0.7601351">
+        <state line="45" column="15" selection-start="2364" selection-end="2364" vertical-scroll-proportion="-28.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/views/base/index.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="75" selection-end="505" vertical-scroll-proportion="0.11653718">
           <folding />
         </state>
       </provider>
