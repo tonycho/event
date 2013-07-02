@@ -6,14 +6,14 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/app.rb" changelist="a7ee6285-1580-4bcd-a2e5-ea821033345e" time="1372372536018" ignored="false" />
     <file path="/Gemfile" changelist="a7ee6285-1580-4bcd-a2e5-ea821033345e" time="1372369709451" ignored="false" />
-    <file path="/a.dummy" changelist="a7ee6285-1580-4bcd-a2e5-ea821033345e" time="1372708600661" ignored="false" />
+    <file path="/a.dummy" changelist="a7ee6285-1580-4bcd-a2e5-ea821033345e" time="1372745467282" ignored="false" />
     <file path="/database.rb" changelist="a7ee6285-1580-4bcd-a2e5-ea821033345e" time="1372650820481" ignored="false" />
     <file path="/Dummy.txt" changelist="a7ee6285-1580-4bcd-a2e5-ea821033345e" time="1372715860566" ignored="false" />
     <file path="/events.rb" changelist="a7ee6285-1580-4bcd-a2e5-ea821033345e" time="1372375957592" ignored="false" />
     <file path="/index.html.haml" changelist="a7ee6285-1580-4bcd-a2e5-ea821033345e" time="1372375477147" ignored="false" />
     <file path="/_event.html.haml" changelist="a7ee6285-1580-4bcd-a2e5-ea821033345e" time="1372375503322" ignored="false" />
     <file path="/show.html.haml" changelist="a7ee6285-1580-4bcd-a2e5-ea821033345e" time="1372375545761" ignored="false" />
-    <file path="/application.haml" changelist="a7ee6285-1580-4bcd-a2e5-ea821033345e" time="1372717941157" ignored="false" />
+    <file path="/application.haml" changelist="a7ee6285-1580-4bcd-a2e5-ea821033345e" time="1372745437709" ignored="false" />
     <file path="/index.haml" changelist="a7ee6285-1580-4bcd-a2e5-ea821033345e" time="1372724919768" ignored="false" />
     <file path="/_form.haml" changelist="a7ee6285-1580-4bcd-a2e5-ea821033345e" time="1372724653186" ignored="false" />
     <file path="$PROJECT_DIR$/../../cpcc/attendance/Gemfile" changelist="a7ee6285-1580-4bcd-a2e5-ea821033345e" time="1372653052846" ignored="false" />
@@ -47,6 +47,7 @@
     <file path="/payment_spec.rb" changelist="a7ee6285-1580-4bcd-a2e5-ea821033345e" time="1372721433901" ignored="false" />
     <file path="$PROJECT_DIR$/../../splurgy/main/spec/models/client_spec.rb" changelist="a7ee6285-1580-4bcd-a2e5-ea821033345e" time="1372721954693" ignored="false" />
     <file path="/client_spec.rb" changelist="a7ee6285-1580-4bcd-a2e5-ea821033345e" time="1372721942670" ignored="false" />
+    <file path="/application.css" changelist="a7ee6285-1580-4bcd-a2e5-ea821033345e" time="1372745637183" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,10 +67,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="application.haml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="application.haml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/views/layouts/application.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="18" selection-start="2953" selection-end="2953" vertical-scroll-proportion="0.7251908">
+            <state line="7" column="26" selection-start="242" selection-end="242" vertical-scroll-proportion="-4.375">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/admin/stylesheets/application.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="204" column="24" selection-start="4403" selection-end="4403" vertical-scroll-proportion="0.65317917">
               <folding />
             </state>
           </provider>
@@ -93,7 +103,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/admin/stylesheets/custom.css" />
         <option value="$PROJECT_DIR$/admin/controllers/conferences.rb" />
         <option value="$PROJECT_DIR$/admin/views/conferences/_form.haml" />
         <option value="$PROJECT_DIR$/config/database.rb" />
@@ -109,6 +118,7 @@
         <option value="$PROJECT_DIR$/admin/views/registrants/edit.haml" />
         <option value="$PROJECT_DIR$/admin/views/base/index.haml" />
         <option value="$PROJECT_DIR$/admin/views/layouts/application.haml" />
+        <option value="$PROJECT_DIR$/public/admin/stylesheets/application.css" />
       </list>
     </option>
   </component>
@@ -653,6 +663,7 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.294835" sideWeight="0.67051417" order="0" side_tool="false" content_ui="combo" />
@@ -664,7 +675,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -732,11 +742,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/database.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="60" selection-start="638" selection-end="638" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/005_create_conferences_registrants.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="82" selection-start="348" selection-end="348" vertical-scroll-proportion="0.22702703" />
@@ -811,7 +816,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/views/layouts/application.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="18" selection-start="2953" selection-end="2953" vertical-scroll-proportion="0.7251908">
+        <state line="7" column="26" selection-start="242" selection-end="242" vertical-scroll-proportion="-4.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/admin/stylesheets/application.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="204" column="24" selection-start="4403" selection-end="4403" vertical-scroll-proportion="0.65317917">
           <folding />
         </state>
       </provider>
