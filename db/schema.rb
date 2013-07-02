@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 3) do
+ActiveRecord::Schema.define(version: 5) do
 
   create_table "accounts", force: true do |t|
     t.string   "name"
@@ -40,6 +40,21 @@ ActiveRecord::Schema.define(version: 3) do
     t.float    "fee"
     t.integer  "currency_id"
     t.integer  "parent_conference_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "conferences_registrants", force: true do |t|
+    t.integer  "conference_id"
+    t.integer  "registrant_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "registrants", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

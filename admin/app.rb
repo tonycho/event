@@ -34,6 +34,7 @@ module Event
     end
 
     access_control.roles_for :admin do |role|
+    role.project_module :registrants, '/registrants'
     role.project_module :conferences, '/conferences'
     role.project_module :categories, '/categories'
     role.project_module :accounts, '/accounts'
