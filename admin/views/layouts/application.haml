@@ -31,6 +31,8 @@
               =link_to "Categories", '/admin/categories'
             %li{:class => "navbar-module #{('active' if request.path_info =~ /^#{'/registrants'}/)}"}
               =link_to "Registrants", '/admin/registrants'
+            %li{:class => "navbar-module #{('active' if request.path_info =~ /^#{'/hosts'}/)}"}
+              =link_to "Hosts", '/admin/hosts'
             -#- project_modules.each do |project_module|
             -#  %li{:class => "navbar-module #{('active' if request.path_info =~ /^#{project_module.path}/)}"}
             -#    =link_to project_module.human_name, project_module.path('/admin')

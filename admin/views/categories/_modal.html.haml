@@ -1,0 +1,5 @@
+#modal_category.modal.fade
+  .modal-header
+  .modal-body
+    -form_for :category, url(:categories, :create), :class => 'form-horizontal' do |f|
+      =partial 'categories/form', :locals => { :f => f }

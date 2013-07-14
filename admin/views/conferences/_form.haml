@@ -3,6 +3,7 @@
   =f.label :category_id, :class => 'control-label'
   .controls
     =f.select :category_id, :options => Category.all.collect {|c| [ c.name, c.id ] }, :class => 'input-xlarge input-with-feedback',:include_blank => true, :style=>'width:200px;'
+    -#%a.btn.btn-primary{:role => "button", "data-toggle" => "modal", :href => "#modal_category"} Add New
     %span.help-inline=error ? f.error_message_on(:category_id, :class => 'text-error') : pat(:example)
 
 - if @conference_options && @conference_options.count > 0
@@ -65,6 +66,15 @@
 -#  .controls
 -#    =f.text_field :parent_conference_id, :class => 'input-xlarge input-with-feedback'
 -#    %span.help-inline=error ? f.error_message_on(:parent_conference_id, :class => 'text-error') : pat(:example)
+
+%fieldset.control-group
+  = label_tag "Attending Hosts", :class => 'control-label'
+  .controls
+    = hidden_field_tag "conference[host_ids][]", :value => nil
+    - Host.all.each do |host|
+      = check_box_tag "conference[host_ids][]", :value => host.id, :checked => @conference.host_ids.include?(host.id), id: "host_#{host.id}"
+      = label_tag host.firstname + " " + host.lastname, :for=>"host_#{host.id}", :style=>'font-weight:normal;'
+      %br
 
 .form-actions
   =f.submit pat(:save), :class => 'btn btn-primary'
