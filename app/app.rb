@@ -8,6 +8,9 @@ module Event
 
     enable :sessions
 
+    get "/" do
+      redirect '/admin/'
+    end
     ##
     # Caching support
     #

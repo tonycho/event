@@ -28,7 +28,7 @@
     =label_tag "Current", :class => "control-label"
     .controls
       - if @media.media_type_id == 1
-        = image_tag @media.get_file_path
+        = image_tag @media.get_file_path, :style=>"width:50%;"
       - else
         = @media.location
 

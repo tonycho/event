@@ -1,14 +1,6 @@
 .base-text.text-center
   %p Welcome to AboveGEM Event Management System Admin
 
-- form_tag '/admin/base', :class => 'upload_form', :method => 'put',  :enctype=>'multipart/form-data' do
-  = flash_tag(:notice)
-  - field_set_tag do
-    %p
-      = label_tag :file
-      = file_field_tag :file
-      = submit_tag "Upload"
-
 -#.base-icons
 -#  .btn-group
 -#    .btn.btn-primary{:title => "Adapters for datamapper, sequel, activerecord, mongomapper, mongoid, couchrest"}=tag_icon("cogs icon-2x", "Add Event")
