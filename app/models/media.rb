@@ -3,12 +3,19 @@ require 'fileutils'
 
 class Media < ActiveRecord::Base
   belongs_to :conference
+  MEDIA_TYPES =
+    {
+      'Image' => 1,
+      'Video' => 2,
+      'Others' => 3
+    }
+  FILE_DIRECTORY = "files"
 
   def self.upload_file params_file
     if params_file
       filename = params_file[:filename]
       file = params_file[:tempfile]
-      directory = "public/files"
+      directory = "public/#{FILE_DIRECTORY}"
 
       File.open(File.join(directory, filename), 'wb') do |f|
         f.write file.read
@@ -20,28 +27,11 @@ class Media < ActiveRecord::Base
     end
   end
 
-  def self.media_types
-    {
-      'Image' => '1',
-      'Video' => '2',
-      'Others' => '3'
-    }
-  end
-
   def media_type_desc
-    case media_type_id
-      when 1
-        "Image"
-      when 2
-        "Video"
-      when 3
-        "Others"
-      else
-        ""
-    end
+    MEDIA_TYPES.index(media_type_id)
   end
 
   def get_file_path
-    "/files/" + location
+    "/#{FILE_DIRECTORY}/" + location
   end
 end

@@ -1,6 +1,6 @@
 - error = @media.errors.include?(:conference_id)
 %fieldset.control-group{:class => error ? 'has-error' : ''}
-  =f.label :conference_id, :class => 'control-label'
+  =f.label "Event", :class => 'control-label', :for => :media_conference_id
   .controls
     =f.select :conference_id, :options => Conference.all.collect {|c| [ c.name, c.id ] }, :class => 'input-xlarge input-with-feedback',:include_blank => true, :style=>'width:200px;'
     -#%a.btn.btn-primary{:role => "button", "data-toggle" => "modal", :href => "#modal_category"} Add New
@@ -15,7 +15,7 @@
 %fieldset.control-group{:class => error ? 'has-error' : ''}
   =f.label :media_type_id, :class => 'control-label'
   .controls
-    =f.select :media_type_id, :options => Media.media_types, :class => 'input-xlarge input-with-feedback',:include_blank => true
+    =f.select :media_type_id, :options => Media::MEDIA_TYPES, :class => 'input-xlarge input-with-feedback',:include_blank => true
     %span.help-inline=error ? f.error_message_on(:media_type_id, :class => 'text-error') : pat(:example)
 - error = @media.errors.include?(:location)
 %fieldset.control-group{:class => error ? 'has-error' : ''}
