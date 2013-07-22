@@ -1,6 +1,5 @@
 %ul.nav.nav-tabs
   -#%li=link_to tag_icon(:list, pat(:list)), url(:conferences, :index)
-  %li=link_to tag_icon(:plus, pat(:new)), url(:conferences, :new)
   %li.active=link_to tag_icon(:edit, pat(:edit)), url(:conferences, :edit, :id => @conference.id)
 
 .tabs-content
