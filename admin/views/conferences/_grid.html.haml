@@ -26,6 +26,7 @@
       %th.header= mat(:conference, :name)
       %th.header Parent Event
       %th.header= mat(:conference, :description)
+      %th.header Hosts
       %th.header= mat(:conference, :start_time)
       %th.header= mat(:conference, :end_time)
       %th.header= mat(:conference, :room)
@@ -51,6 +52,10 @@
             = conference.description[0..200] + " ..."
           - else
             = conference.description
+        %td.list-column
+          %ul
+            - conference.hosts.each do |host|
+              %li= host.firstname + " " + host.lastname
         %td.list-column=conference.start_time.strftime('%Y/%m/%d')
         %td.list-column=conference.end_time.strftime('%Y/%m/%d')
         %td.list-column=conference.room
