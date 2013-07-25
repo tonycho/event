@@ -1,9 +1,8 @@
 event-admin
 ===========
 
-git clone the project
-cd to the project directory
-
+git clone git@github.com:abovegem/event-admin.git
+cd event-admin
 bundle install
 padrino rake ar:create
 padrino rake ar:migrate
