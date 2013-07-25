@@ -47,7 +47,8 @@
           %td.list-column=media.location
           %td.list-column
             - if media.media_type_id == 1
-              = image_tag media.get_file_path, :style=>"width:100px;"
+              %a.fancybox{ "data-fancybox-group"=>"gallery", :href=> media.get_file_path}
+                = image_tag media.get_file_path, :style=>"width:100px;" , :class=> "thumbnail"
           %td.list-column=time_ago_in_words media.created_at
           %td.list-column=time_ago_in_words media.updated_at
           %td.list-column.list-row-action
@@ -60,4 +61,4 @@
                 .popover-content
                   -form_tag url(:medias, :destroy, :id => media.id), :method => :delete do
                     =submit_tag pat(:delete), :class =>'list-row-action-popover-delete-one-btn btn btn-danger btn-small'
-                    .btn.btn-small.cancel=pat(:cancel)
+                    %a.btn.btn-small.cancel=pat(:cancel)
