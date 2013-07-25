@@ -34,6 +34,8 @@ module Event
     end
 
     access_control.roles_for :admin do |role|
+    role.project_module :media_types, '/media_types'
+    role.project_module :news, '/news'
     role.project_module :medias, '/media'
     role.project_module :hosts, '/hosts'
     role.project_module :registrants, '/registrants'

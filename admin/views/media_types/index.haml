@@ -1,5 +1,5 @@
 %ul.nav.nav-tabs
-  %li=link_to tag_icon(:plus, pat(:new)), url(:medias, :new)
+  %li=link_to tag_icon(:plus, pat(:new)), url(:media_types, :new)
 
 .tabs-content
   %table#list.table.table-striped.table-hover.table-condensed
@@ -21,43 +21,35 @@
                   .arrow
                   %h3.popover-title=pat(:delete_selected_title)
                   .popover-content
-                    -form_tag url(:medias, :destroy_many), :method => :delete do
-                      =hidden_field_tag :media_ids, :'data-delete-many-ids' => true
+                    -form_tag url(:media_types, :destroy_many), :method => :delete do
+                      =hidden_field_tag :media_type_ids, :'data-delete-many-ids' => true
                       =submit_tag pat(:delete), :class =>'list-menu-popover-delete-selected-btn btn btn-danger btn-small'
                       .btn.btn-small.cancel=pat(:cancel)
-        %th.header= mat(:media, :id)
-        %th.header= mat(:media, :conference)
-        %th.header= mat(:media, :name)
-        %th.header= mat(:media, :media_type_id)
-        %th.header File
-        %th.header Preview
-        %th.header= mat(:media, :created_at)
-        %th.header= mat(:media, :updated_at)
+        %th.header= mat(:media_type, :id)
+        %th.header= mat(:media_type, :name)
+        %th.header= mat(:media_type, :description)
+        %th.header= mat(:media_type, :created_at)
+        %th.header= mat(:media_type, :updated_at)
         %th.header.list-row-action-header
 
     %tbody
-      -@media.each do |media|
+      -@media_types.each do |media_type|
         %tr.list-row
           %td.list-column.list-selectable
-            =check_box_tag 'media_ids[]', :value => media.id, :class => 'list-selectable-checkbox'
-          %td.list-column=media.id
-          %td.list-column=media.conference.try(:name)
-          %td.list-column=media.name
-          %td.list-column=media.media_type_desc
-          %td.list-column=media.location
-          %td.list-column
-            - if media.media_type_id == 1
-              = image_tag media.get_file_path, :style=>"width:100px;"
-          %td.list-column=time_ago_in_words media.created_at
-          %td.list-column=time_ago_in_words media.updated_at
+            =check_box_tag 'media_type_ids[]', :value => media_type.id, :class => 'list-selectable-checkbox'
+          %td.list-column=media_type.id
+          %td.list-column=media_type.name
+          %td.list-column=media_type.description
+          %td.list-column=time_ago_in_words media_type.created_at
+          %td.list-column=time_ago_in_words media_type.updated_at
           %td.list-column.list-row-action
             .list-row-action-wrapper
-              =link_to tag_icon(:edit), :href => url(:medias, :edit, :id => media.id), :rel => :tooltip, :title => "#{pat(:edit)} media", :class => 'list-row-action-wrapper-link'
-              =link_to tag_icon(:trash), :rel => :tooltip, :title => "#{pat(:delete)} media", :class => 'list-row-action-delete-one list-row-action-wrapper-link'
+              =link_to tag_icon(:edit), :href => url(:media_types, :edit, :id => media_type.id), :rel => :tooltip, :title => "#{pat(:edit)} media_type", :class => 'list-row-action-wrapper-link'
+              =link_to tag_icon(:trash), :rel => :tooltip, :title => "#{pat(:delete)} media_type", :class => 'list-row-action-delete-one list-row-action-wrapper-link'
               .popover.list-row-action-popover-delete-one.left
                 .arrow
-                %h3.popover-title=pat(:delete, :model => "media")
+                %h3.popover-title=pat(:delete, :model => "media_type")
                 .popover-content
-                  -form_tag url(:medias, :destroy, :id => media.id), :method => :delete do
+                  -form_tag url(:media_types, :destroy, :id => media_type.id), :method => :delete do
                     =submit_tag pat(:delete), :class =>'list-row-action-popover-delete-one-btn btn btn-danger btn-small'
                     .btn.btn-small.cancel=pat(:cancel)

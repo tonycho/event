@@ -1,5 +1,5 @@
 %ul.nav.nav-tabs
-  %li=link_to tag_icon(:plus, pat(:new)), url(:medias, :new)
+  %li=link_to tag_icon(:plus, pat(:new)), url(:news, :new)
 
 .tabs-content
   %table#list.table.table-striped.table-hover.table-condensed
@@ -21,43 +21,39 @@
                   .arrow
                   %h3.popover-title=pat(:delete_selected_title)
                   .popover-content
-                    -form_tag url(:medias, :destroy_many), :method => :delete do
-                      =hidden_field_tag :media_ids, :'data-delete-many-ids' => true
+                    -form_tag url(:news, :destroy_many), :method => :delete do
+                      =hidden_field_tag :news_ids, :'data-delete-many-ids' => true
                       =submit_tag pat(:delete), :class =>'list-menu-popover-delete-selected-btn btn btn-danger btn-small'
                       .btn.btn-small.cancel=pat(:cancel)
-        %th.header= mat(:media, :id)
-        %th.header= mat(:media, :conference)
-        %th.header= mat(:media, :name)
-        %th.header= mat(:media, :media_type_id)
-        %th.header File
-        %th.header Preview
-        %th.header= mat(:media, :created_at)
-        %th.header= mat(:media, :updated_at)
+        %th.header= mat(:news, :id)
+        %th.header= mat(:news, :conference)
+        %th.header= mat(:news, :title)
+        %th.header= mat(:news, :note)
+        %th.header= mat(:news, :notification)
+        %th.header= mat(:news, :created_at)
+        %th.header= mat(:news, :updated_at)
         %th.header.list-row-action-header
 
     %tbody
-      -@media.each do |media|
+      -@news.each do |news|
         %tr.list-row
           %td.list-column.list-selectable
-            =check_box_tag 'media_ids[]', :value => media.id, :class => 'list-selectable-checkbox'
-          %td.list-column=media.id
-          %td.list-column=media.conference.try(:name)
-          %td.list-column=media.name
-          %td.list-column=media.media_type_desc
-          %td.list-column=media.location
-          %td.list-column
-            - if media.media_type_id == 1
-              = image_tag media.get_file_path, :style=>"width:100px;"
-          %td.list-column=time_ago_in_words media.created_at
-          %td.list-column=time_ago_in_words media.updated_at
+            =check_box_tag 'news_ids[]', :value => news.id, :class => 'list-selectable-checkbox'
+          %td.list-column=news.id
+          %td.list-column=news.conference.try(:name)
+          %td.list-column=news.title
+          %td.list-column=news.note
+          %td.list-column= news.notification ? "Yes" : "No"
+          %td.list-column=time_ago_in_words news.created_at
+          %td.list-column=time_ago_in_words news.updated_at
           %td.list-column.list-row-action
             .list-row-action-wrapper
-              =link_to tag_icon(:edit), :href => url(:medias, :edit, :id => media.id), :rel => :tooltip, :title => "#{pat(:edit)} media", :class => 'list-row-action-wrapper-link'
-              =link_to tag_icon(:trash), :rel => :tooltip, :title => "#{pat(:delete)} media", :class => 'list-row-action-delete-one list-row-action-wrapper-link'
+              =link_to tag_icon(:edit), :href => url(:news, :edit, :id => news.id), :rel => :tooltip, :title => "#{pat(:edit)} news", :class => 'list-row-action-wrapper-link'
+              =link_to tag_icon(:trash), :rel => :tooltip, :title => "#{pat(:delete)} news", :class => 'list-row-action-delete-one list-row-action-wrapper-link'
               .popover.list-row-action-popover-delete-one.left
                 .arrow
-                %h3.popover-title=pat(:delete, :model => "media")
+                %h3.popover-title=pat(:delete, :model => "news")
                 .popover-content
-                  -form_tag url(:medias, :destroy, :id => media.id), :method => :delete do
+                  -form_tag url(:news, :destroy, :id => news.id), :method => :delete do
                     =submit_tag pat(:delete), :class =>'list-row-action-popover-delete-one-btn btn btn-danger btn-small'
                     .btn.btn-small.cancel=pat(:cancel)

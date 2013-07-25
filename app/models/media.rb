@@ -3,6 +3,8 @@ require 'fileutils'
 
 class Media < ActiveRecord::Base
   belongs_to :conference
+  belongs_to :media
+
   MEDIA_TYPES =
     {
       'Image' => 1,

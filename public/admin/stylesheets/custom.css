@@ -9,3 +9,7 @@ select {
 textarea {
     height:120px;
 }
+
+ul.nav li.dropdown:hover > ul.dropdown-menu{
+    display: block;
+}
