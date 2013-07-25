@@ -1,6 +1,7 @@
 event-admin
 ===========
 
+<blockquote>
 git clone git@github.com:abovegem/event-admin.git
 
 cd event-admin
@@ -16,3 +17,4 @@ padrino rake seed
 padrino start
 
 open up your browser and go to localhost:300
+</blockquote>
