@@ -3,14 +3,8 @@ require 'fileutils'
 
 class Media < ActiveRecord::Base
   belongs_to :conference
-  belongs_to :media
+  belongs_to :media_type
 
-  MEDIA_TYPES =
-    {
-      'Image' => 1,
-      'Video' => 2,
-      'Others' => 3
-    }
   FILE_DIRECTORY = "files"
 
   def self.upload_file params_file
@@ -30,7 +24,7 @@ class Media < ActiveRecord::Base
   end
 
   def media_type_desc
-    MEDIA_TYPES.index(media_type_id)
+    self.media_type.try(:name)
   end
 
   def get_file_path
