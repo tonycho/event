@@ -1,3 +1,4 @@
+%h1 Media
 %ul.nav.nav-tabs
   %li=link_to tag_icon(:plus, pat(:new)), url(:medias, :new)
 
@@ -26,7 +27,7 @@
                       =submit_tag pat(:delete), :class =>'list-menu-popover-delete-selected-btn btn btn-danger btn-small'
                       .btn.btn-small.cancel=pat(:cancel)
         %th.header= mat(:media, :id)
-        %th.header= mat(:media, :conference)
+        %th.header Event
         %th.header= mat(:media, :name)
         %th.header= mat(:media, :media_type_id)
         %th.header File
