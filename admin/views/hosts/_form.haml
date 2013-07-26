@@ -2,7 +2,7 @@
 %fieldset.control-group{:class => error ? 'has-error' : ''}
   =f.label :title, :class => 'control-label'
   .controls
-    =f.text_field :title, :class => 'input-xlarge input-with-feedback', :autofocus => true
+    =f.select :title, :options => Host::HOST_TITLES, :class => 'styled input-xlarge input-with-feedback', :autofocus => true, :style => "width:70px;"
     %span.help-inline=error ? f.error_message_on(:title, :class => 'text-error') : pat(:example)
 - error = @host.errors.include?(:description)
 %fieldset.control-group{:class => error ? 'has-error' : ''}
