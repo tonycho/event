@@ -2,7 +2,7 @@
 %fieldset.control-group{:class => error ? 'has-error' : ''}
   =f.label :category_id, :class => 'control-label'
   .controls
-    =f.select :category_id, :options => Category.all.collect {|c| [ c.name, c.id ] }, :class => 'input-xlarge input-with-feedback',:include_blank => true, :style=>'width:200px;'
+    =f.select :category_id, :options => Category.all.collect {|c| [ c.name, c.id ] }, :class => 'styled input-xlarge input-with-feedback',:include_blank => true, :style=>'width:200px;'
     -#%a.btn.btn-primary{:role => "button", "data-toggle" => "modal", :href => "#modal_category"} Add New
     %span.help-inline=error ? f.error_message_on(:category_id, :class => 'text-error') : pat(:example)
 
@@ -10,7 +10,7 @@
   %fieldset.control-group{:class => error ? 'has-error' : ''}
     =f.label "Parent Event", :class => 'control-label', :for => :parent_conference_id
     .controls
-      =f.select :parent_conference_id, :options => @conference_options, :class => 'input-xlarge input-with-feedback',:include_blank => true, :style=>'width:200px;'
+      =f.select :parent_conference_id, :options => @conference_options, :class => 'styled input-xlarge input-with-feedback',:include_blank => true, :style=>'width:200px;'
       %span.help-inline=error ? f.error_message_on(:category_id, :class => 'text-error') : pat(:example)
 
 - error = @conference.errors.include?(:name)

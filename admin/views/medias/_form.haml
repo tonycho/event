@@ -2,7 +2,7 @@
 %fieldset.control-group{:class => error ? 'has-error' : ''}
   =f.label "Event", :class => 'control-label', :for => :media_conference_id
   .controls
-    =f.select :conference_id, :options => Conference.all.collect {|c| [ c.name, c.id ] }, :class => 'input-xlarge input-with-feedback',:include_blank => true, :style=>'width:200px;'
+    =f.select :conference_id, :options => Conference.all.collect {|c| [ c.name, c.id ] }, :class => 'styled input-xlarge input-with-feedback',:include_blank => true, :style=>'width:200px;'
     -#%a.btn.btn-primary{:role => "button", "data-toggle" => "modal", :href => "#modal_category"} Add New
     %span.help-inline=error ? f.error_message_on(:conference_id, :class => 'text-error') : pat(:example)
 - error = @media.errors.include?(:name)
@@ -15,7 +15,7 @@
 %fieldset.control-group{:class => error ? 'has-error' : ''}
   =f.label :media_type_id, :class => 'control-label'
   .controls
-    =f.select :media_type_id, :options => MediaType.all.collect {|mt| [ mt.name, mt.id ] }, :class => 'input-xlarge input-with-feedback',:include_blank => true, :style=>'width:200px;'
+    =f.select :media_type_id, :options => MediaType.all.collect {|mt| [ mt.name, mt.id ] }, :class => 'styled input-xlarge input-with-feedback',:include_blank => true, :style=>'width:200px;'
 
     %span.help-inline=error ? f.error_message_on(:media_type_id, :class => 'text-error') : pat(:example)
 - error = @media.errors.include?(:location)
@@ -29,7 +29,7 @@
     =label_tag "Current", :class => "control-label"
     .controls
       - if @media.media_type_id == 1
-        = image_tag @media.get_file_path, :style=>"width:50%;"
+        = image_tag @media.get_file_path, :style=>"width:50%;", :class =>"thumbnail"
       - else
         = @media.location
 
