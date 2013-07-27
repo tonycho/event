@@ -8,8 +8,10 @@ Event::Admin.controllers :conferences do
   get :new do
     @title = pat(:new_title, :model => 'conference')
     @conference = Conference.new
+    @category = Category.new(params[:category])
 
     @conference_options = []
+
     Conference.all.each do |c|
       @conference_options << [ c.name, c.id ]
     end
@@ -18,8 +20,7 @@ Event::Admin.controllers :conferences do
   end
 
   post :create do
-    @conference = Conference.new(params[:conference])
-
+    @category = Category.new(params[:category])
     if @conference.save
       @title = pat(:create_title, :model => "conference #{@conference.id}")
       flash[:success] = pat(:create_success, :model => 'Conference')
@@ -34,6 +35,7 @@ Event::Admin.controllers :conferences do
   get :edit, :with => :id do
     @title = pat(:edit_title, :model => "conference #{params[:id]}")
     @conference = Conference.find(params[:id])
+    @category = Category.new(params[:category])
 
     @conference_options = []
 

@@ -4,3 +4,5 @@
 .tabs-content
   -form_for :conference, url(:conferences, :update, :id => @conference.id), :method => :put, :class => 'form-horizontal' do |f|
     =partial 'conferences/form', :locals => { :f => f }
+
+= partial 'categories/modal'

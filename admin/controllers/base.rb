@@ -1,6 +1,5 @@
 require 'rubygems'
 require 'sinatra'
-
 require 'fileutils'
 
 Event::Admin.controllers :base do

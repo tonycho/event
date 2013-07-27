@@ -11,16 +11,28 @@ Event::Admin.controllers :categories do
     render 'categories/new'
   end
 
-  post :create do
+  post :create, :provides => [:html, :json] do
     @category = Category.new(params[:category])
+    puts "DANG: " + content_type.inspect
+
     if @category.save
-      @title = pat(:create_title, :model => "category #{@category.id}")
-      flash[:success] = pat(:create_success, :model => 'Category')
-      params[:save_and_continue] ? redirect(url(:categories, :index)) : redirect(url(:categories, :edit, :id => @category.id))
+      case content_type
+        when :html
+          @title = pat(:create_title, :model => "category #{@category.id}")
+          flash[:success] = pat(:create_success, :model => 'Category')
+          params[:save_and_continue] ? redirect(url(:categories, :index)) : redirect(url(:categories, :edit, :id => @category.id))
+        when :json
+          {:success => true, :resource => @category}.to_json
+      end
     else
-      @title = pat(:create_title, :model => 'category')
-      flash.now[:error] = pat(:create_error, :model => 'category')
-      render 'categories/new'
+      case content_type
+        when :html
+          @title = pat(:create_title, :model => 'category')
+          flash.now[:error] = pat(:create_error, :model => 'category')
+          render 'categories/new'
+        when :json
+          {:success => false, :errors => pat(:create_error, :model => 'category')}.to_json
+      end
     end
   end
 

@@ -10,14 +10,14 @@
     %title= @title.present? ? "#{@title} | Padrino Admin" : "Padrino Admin"
     =favicon_tag 'favicon.ico'
     %link{:href => 'http://fonts.googleapis.com/css?family=Varela', :rel => :stylesheet}
-    =stylesheet_link_tag 'bootstrap', 'jquery.fancybox', 'application', 'custom', 'datepicker', 'select2'
+    =stylesheet_link_tag 'bootstrap', 'bootstrap-modal', 'jquery.fancybox', 'application', 'custom', 'datepicker', 'select2'
 
     =javascript_include_tag 'jquery-1.9.0.min', 'jquery.fancybox.pack', 'select2', (Padrino.env == :production ? 'bootstrap/bootstrap.min' : %w[bootstrap/bootstrap-affix bootstrap/bootstrap-alert bootstrap/bootstrap-button bootstrap/bootstrap-carousel bootstrap/bootstrap-collapse bootstrap/bootstrap-dropdown bootstrap/bootstrap-tooltip bootstrap/bootstrap-transition bootstrap/bootstrap-typeahead bootstrap/bootstrap-modal bootstrap/bootstrap-popover bootstrap/bootstrap-scrollspy bootstrap/bootstrap-tab]), 'bootstrap/bootstrap-datepicker', :application, :main
 
   %body
     .navbar.navbar-fixed-top
       .navbar-inner
-        .container
+        .container-fluid
           =link_to 'AboveGEM', url(:base_index), :class => 'navbar-brand', :title => 'AboveGEM Event Admin'
           %ul.nav.pull-right
             %li.navbar-edit-account=link_to tag_icon(:user), url(:accounts, :edit, :id => current_account.id), :title => pat(:profile), :class => 'navbar-nav-link'
@@ -40,10 +40,10 @@
                   %ul.dropdown-menu
                     %li
                       =link_to "Media Types", "/admin/media_types"
-    .container.main
+    .container-fluid.main
       .main-wrapper
         =[:error, :warning, :success, :notice].map { |type| flash_tag(type, :class => "alert alert-#{type} fade in", :bootstrap => true) }.join.html_safe
-        .row=yield
+        .row-fluid=yield
         .main-wrapper-push
 
     %footer
