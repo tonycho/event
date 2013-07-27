@@ -13,7 +13,6 @@ Event::Admin.controllers :categories do
 
   post :create, :provides => [:html, :json] do
     @category = Category.new(params[:category])
-    puts "DANG: " + content_type.inspect
 
     if @category.save
       case content_type
