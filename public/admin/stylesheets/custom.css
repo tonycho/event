@@ -2,6 +2,10 @@ input, textarea {
     width: 50%;
 }
 
+.modal-body input, .modal-body textarea {
+    width:95%;
+}
+
 select {
     width:auto;
 }
