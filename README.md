@@ -1,18 +1,12 @@
-The demo is hosted at http://event2vive.herokuapp.com/admin/
+# _Project_
+This app is to a conference event management system utilizing Padrino for learning purposes. You can find the live demo at http://event2vive.herokuapp.com/admin/
+
 login:
 u: admin@2vive.com
 p: demo
 
-This app is to manage events utilizing Padrino for learning purposes.
+## Project Setup
 
-Padrino, Sinatra, SqlLite3, and Twitter bootstrap have been used in this project.
-
-Feel free to try it out locally by following the instructions below
-
-
-Instructions:
-event-admin
-===========
 
     git clone git@github.com:abovegem/event-admin.git
     cd event-admin
@@ -22,6 +16,22 @@ event-admin
     padrino rake seed
     padrino start
     open up your browser and go to localhost:300
+
+## Technologies & Useful Tools
+> - Padrino, Sinatra, SqlLite3, and Twitter bootstrap
+> - How to set up Padrino
+> - How to use bootstrap
+> - How to use media upload in Sinatra
+
+## Contributing changes
+
+- _Internal git workflow_
+- _Pull request guidelines_
+- _Tracker project_
+- _Google group_
+- _irc channel_
+- _"Please open github issues"_
+
     
 
 

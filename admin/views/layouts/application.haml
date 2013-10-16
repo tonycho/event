@@ -18,7 +18,7 @@
     .navbar.navbar-fixed-top
       .navbar-inner
         .container-fluid
-          =link_to 'AboveGEM', url(:base_index), :class => 'navbar-brand', :title => 'AboveGEM Event Admin'
+          =link_to 'EVENT', url(:base_index), :class => 'navbar-brand', :title => 'Event Admin'
           %ul.nav.pull-right
             %li.navbar-edit-account=link_to tag_icon(:user), url(:accounts, :edit, :id => current_account.id), :title => pat(:profile), :class => 'navbar-nav-link'
             %li.navbar-logout
@@ -48,10 +48,10 @@
 
     %footer
       .footer-wrapper.container
-        %p.pull-left
+        .pull-left
           Copyright &copy;
           =Time.now.year
-          AboveGEM Event Management
+          Event Management
         %ul.pull-right.footer-links
           %li= link_to tag_icon(:heart, 'contact us'), '#', :class => 'footer-links-link'
           %li= link_to tag_icon(:home, 'support'), '#', :class => 'footer-links-link'
