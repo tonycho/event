@@ -16,7 +16,7 @@ tony.cho@gmail.com/demo
     padrino rake ar:migrate
     padrino rake seed
     padrino start
-    open up your browser and go to localhost:300
+    open up your browser and go to localhost:3000
 
 ## Technologies & Useful Tools
 - Padrino, Sinatra, SqlLite3, and Twitter bootstrap
