@@ -15,7 +15,7 @@
     =javascript_include_tag 'jquery-1.9.0.min', 'jquery.fancybox.pack', 'select2', (Padrino.env == :production ? 'bootstrap/bootstrap.min' : %w[bootstrap/bootstrap-affix bootstrap/bootstrap-alert bootstrap/bootstrap-button bootstrap/bootstrap-carousel bootstrap/bootstrap-collapse bootstrap/bootstrap-dropdown bootstrap/bootstrap-tooltip bootstrap/bootstrap-transition bootstrap/bootstrap-typeahead bootstrap/bootstrap-modal bootstrap/bootstrap-popover bootstrap/bootstrap-scrollspy bootstrap/bootstrap-tab]), 'bootstrap/bootstrap-datepicker', :application, :main
 
   %body
-    .navbar.navbar-fixed-top
+    .navbar
       .navbar-inner
         .container-fluid
           =link_to 'EVENT', url(:base_index), :class => 'navbar-brand', :title => 'Event Admin'
@@ -47,7 +47,7 @@
         .main-wrapper-push
 
     %footer
-      .footer-wrapper.container
+      .footer-wrapper.container-fluid
         .pull-left
           Copyright &copy;
           =Time.now.year
