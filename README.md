@@ -5,7 +5,7 @@ Tony Cho
 This app is a conference event management system utilizing Padrino for learning purposes. You can find the live demo at http://event2vive.herokuapp.com/admin/
 
 login:
-admin@2vive.com/demo
+tony.cho@gmail.com/demo
 
 ## Project Setup
 
