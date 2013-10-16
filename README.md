@@ -1,3 +1,6 @@
+## Author
+Tony Cho
+
 ## Project Summary
 This app is a conference event management system utilizing Padrino for learning purposes. You can find the live demo at http://event2vive.herokuapp.com/admin/
 
